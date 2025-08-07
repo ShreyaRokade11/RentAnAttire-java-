@@ -1,0 +1,531 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4 Dec, 2024, 4:06:51 PM
+    Author     : rokad
+*/
+
+/* Reset and basic styling */
+/* General Header Styling */
+header {
+  background-color: #391306;
+  padding: 20px 0;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+  position: relative; /* For dropdown positioning */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f1c40f; /* Yellow color on hover */
+}
+
+/* Dropdown Menu Styling */
+nav ul li .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  padding: 10px 0;
+  list-style: none;
+  width: 150px;
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+nav ul li .dropdown li a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li .dropdown li a:hover {
+  background-color: #555;
+}
+
+/* Login Button Styling */
+.login-btn {
+  color: white;
+  background-color: #b95c50;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background-color: #deb3ad;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li .dropdown {
+    position: relative;
+    width: 100%;
+  }
+
+  nav ul li .dropdown li a {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+  
+ /* Hero Section */
+.hero {
+  height: 100vh; /* Full-screen height */
+  position: relative; /* Positioning for the background image */
+  overflow: hidden; /* Hides any overflow, like images going outside the container */
+  text-align: center; /* Centers text horizontally */
+  color: white; /* White text color */
+  display: flex; /* Flexbox layout for vertical and horizontal centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Before pseudo-element used for slideshow background */
+.hero::before {
+  content: ''; /* No text content */
+  position: absolute; /* Position it relative to the .hero container */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Take up the full width */
+  height: 100%; /* Take up the full height */
+  background: url('images/imagesback2.jpg') no-repeat center center; /* Set initial background image */
+  background-size: cover; /* Ensures the background image covers the entire area */
+  animation: slideshow 20s infinite; /* Apply slideshow animation with a 10-second cycle */
+  z-index: 0; /* Makes sure the background stays behind the text */
+}
+/* Slideshow animation that changes the background */
+@keyframes slideshow {
+  0% { 
+      background: url('images/back1.webp') no-repeat center center; /* Initial image */
+      background-size: cover; /* Ensures the image covers the area */
+      opacity: 1; /* Fully visible */
+  }
+  33% { 
+      background: url('images/back2.jpg') no-repeat center center; /* Switch to second image */
+      background-size: cover; /* Ensures the image covers the area */
+      opacity: 1; /* Fully visible */
+  }
+  66% { 
+      background: url('images/back3.jpg') no-repeat center center; /* Switch to third image */
+      background-size: cover; /* Ensures the image covers the area */
+      opacity: 1; /* Fully visible */
+  }
+  100% { 
+      background: url('images/back1.webp') no-repeat center center; /* Return to the first image */
+      background-size: cover; /* Ensures the image covers the area */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+
+
+/* Content inside the hero section */
+.hero-content {
+  position: relative; /* Positioning so it's above the background */
+  z-index: 1; /* Makes sure the content stays above the background */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Optional text shadow to enhance readability */
+}
+
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .hero .btn {
+    background: #f76c6c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background: #ff4a4a;
+  }
+  
+  /* Categories Section */
+  .categories {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .categories h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .category-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .category-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .category-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .category-item h3 {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+
+  
+
+  
+  
+  /* Main container for the gender selection section */
+.gender-selection {
+  text-align: center; /* Center the content */
+  padding: 50px 20px; /* Add space around the section */
+  background-color: #f9f1f0; /* Light pink background */
+}
+
+/* Style for the section heading */
+.gender-selection h2 {
+  font-size: 2.5em; /* Large font size for emphasis */
+  margin-bottom: 40px; /* Space below the heading */
+  color: #333; /* Dark text color */
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: bold; /* Make the heading bold */
+}
+
+/* Container that holds the two images */
+.images-container {
+  display: flex; /* Flexbox layout to position images side by side */
+  justify-content: center; /* Center the images */
+  gap: 30px; /* Add space between the images */
+}
+
+/* Styling for individual image containers */
+.image-item {
+  position: relative; /* To position the overlay inside the image container */
+  width: 280px; /* Set the width of the image container */
+  height: 380px; /* Set the height of the image container */
+  overflow: hidden; /* Hide anything that goes beyond the container */
+  border-radius: 15px; /* Rounded corners for a smooth look */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+  cursor: pointer; /* Change cursor to a pointer to indicate it's clickable */
+}
+
+/* Image styling inside the image container */
+.gender-image {
+  width: 100%; /* Make the image fill the container width */
+  height: 100%; /* Make the image fill the container height */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+  transition: transform 0.3s ease, opacity 0.5s ease; /* Smooth transition for zoom and opacity */
+}
+
+/* Hover effect for images: zoom and reduce opacity */
+.image-item:hover .gender-image {
+  transform: scale(1.1); /* Zoom in the image */
+  opacity: 0.8; /* Reduce opacity slightly */
+}
+
+/* Styling for the overlay text on hover */
+.overlay {
+  position: absolute; /* Position the overlay inside the image container */
+  bottom: 10%; /* Position it towards the bottom of the image */
+  left: 50%; /* Center the overlay horizontally */
+  transform: translateX(-50%); /* Align the overlay perfectly in the center */
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  color: white; /* White text for contrast */
+  font-size: 1.5em; /* Slightly larger font for visibility */
+  padding: 10px 20px; /* Add padding inside the overlay */
+  text-transform: uppercase; /* Make the text uppercase */
+  font-weight: bold; /* Bold text for emphasis */
+  border-radius: 5px; /* Rounded corners for the overlay */
+  opacity: 0; /* Hide overlay initially */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* Show overlay on hover */
+.image-item:hover .overlay {
+  opacity: 1; /* Make the overlay visible */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .images-container {
+    flex-direction: column; /* Stack the images vertically on smaller screens */
+    gap: 20px; /* Reduced space between images */
+  }
+  .image-item {
+    width: 100%; /* Make each image container take full width */
+    height: auto; /* Adjust the height proportionally */
+  }
+}
+
+  
+  
+  
+  /*trends alert */
+  .trend-alerts {
+    padding: 40px 20px;
+    background-color: #de847b;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image {
+    width: 45%;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.content {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #FF6F61;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #e05b4f;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image, .content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+  
+ 
+     
+
+
+
+
+/* Men's Wear Section */
+.mens-wear {
+    padding: 50px 20px;
+    background-color:  #391306;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: flex-start;  /* Align content to the left */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.text-container {
+    width: 50%;
+    padding-right: 20px; /* Adds space between text and image */
+    text-align: left;
+}
+
+.text-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text-container .tagline {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d9534f; /* Red color for emphasis */
+    margin-bottom: 15px;
+}
+
+.text-container .description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.rent-now-btn {
+    display: inline-block;
+    background-color: #f76c6c;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.rent-now-btn:hover {
+    background-color: #e66d4f;
+}
+
+.image-container {
+    width: 50%;
+    text-align: right; /* Aligns the image to the right inside its container */
+}
+
+.mens-wear-image {
+    height: 550px;
+    width: 320px;  
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* About Us Section */
+.about-us {
+    padding: 50px;
+    background-color: #592f2d;
+    color: #333;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+}
+
+.about-us p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color:#f0e1de ;
+}
+
+  
+  /* Footer */
+  footer {
+    background: #391306;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  

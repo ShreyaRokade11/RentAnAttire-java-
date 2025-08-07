@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | RentAnAttire</title>
+  <link rel="stylesheet" href="styleindex.css">
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body >
+  <!-- Navigation Bar -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <h1>RentAnAttire</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#categories">Categories</a>
+            <ul class="dropdown">
+              <li><a href="ProductMen.jsp">Men's</a></li>
+              <li><a href="ProductWomen.jsp">Women's</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="about.jsp">About</a></li>
+          
+        </ul>
+      </nav>
+         <a href="cart.jsp" class="login-btn">cart</a>
+         <a href="login.html" class="login-btn">Login</a>
+           <a href="logout.jsp" class="login-btn">Logout</a>
+         <a href="AdminLogin.jsp" class="login-btn">Admin </a>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to RentAnAttire</h1>
+      <p>Rent the perfect outfit for every occasion.</p>
+      <a href="#categories" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Gender Selection Section -->
+  <section class="gender-selection">
+    <h2>Choose Your Style</h2>
+    <div class="images-container">
+      <!-- Women's Image (direct to Women's Clothes) -->
+      <div class="image-item">
+        <a href="ProductWomen.jsp">
+          <img src="images/womens-style.jpg" alt="Women's Clothing" class="gender-image">
+          <div class="overlay">For Her</div>
+        </a>
+      </div>
+      <!-- Men's Image (direct to Men's Clothes) -->
+      <div class="image-item">
+        <a href="ProductMen.jsp">
+          <img src="images/mens-style.jpg" alt="Men's Clothing" class="gender-image">
+          <div class="overlay">For Him</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section id="categories" class="categories">
+    <h2>Our Categories</h2>
+    <div class="category-grid">
+      <div class="category-item">
+        <img src="images/wedding.jpg" alt="Wedding Attire">
+        <h3>Wedding Attire</h3>
+      </div>
+      <div class="category-item">
+        <img src="images/party.jpg" alt="Party Wear">
+        <h3>Party Wear</h3>
+      </div>
+      <div class="category-item">
+        <img src="images/indo.jpg" alt="IndoWestern Wear">
+        <h3>IndoWestern</h3>
+      </div>
+      <div class="category-item">
+        <img src="images/jewelry.jpg" alt="Jewelry">
+        <h3>Jewelry</h3>
+      </div>
+      <div class="category-item">
+        <img src="images/saree.jpg" alt="Sarees">
+        <h3>Sarees</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trend Alerts Section -->
+<section class="trend-alerts">
+  <div class="container">
+    <div class="image">
+      <img src="images/trend-alerts.jpg" alt="Trend Alerts">
+    </div>
+    <div class="content">
+      <h2>Trend Alerts</h2>
+      <p>De-risk Your Style Experiment</p>
+      <p>Be any version of yourself without burning your pockets</p>
+      <a href="ProductWomen.jsp" class="btn">Rent Now</a>
+    </div>
+  </div>
+</section>
+  
+<!-- Men's Wear Section -->
+<section class="mens-wear">
+    <div class="content-wrapper">
+        <div class="text-container">
+            <h2>Men's Wear</h2>
+            <p class="tagline"><strong>Why Should Girls Have All The Fun?</strong></p>
+            <p class="description">For the dapper and uber-stylish modern man</p>
+            <a href="ProductMen.jsp" class="rent-now-btn">RENT NOW</a>
+        </div>
+        <div class="image-container">
+            <img src="images/mensstyle.webp" alt="Men's Wear" class="mens-wear-image">
+        </div>
+    </div>
+</section>
+
+
+
+  
+  
+  
+  
+  
+  
+  <!-- About Us Section -->
+<section class="about-us">
+    <h2>About Us</h2>
+    <p>
+        Rent An Attire offers premium fashion rental services at affordable prices, all while prioritizing sustainability. 
+        From Mehendi to Haldi to weddings, pre-wedding shoots to themed parties, our extensive collection of designer outfits 
+        caters to every occasion without compromising on style or the environment for both men and women.
+    </p>
+    <p>
+        Our curated selection includes designer ensembles from renowned brands such as Sabyasachi, Seema Gujral, Dolly J, 
+        Lalit Dalmia, Kalki, and Kora, available at a fraction of their market prices. By opting for rental over purchase, 
+        you not only save money but also contribute to reducing the fashion industry's carbon footprint.
+    </p>
+    <p>
+        At Rent An Attire, we showcase a diverse range of ethnic wear, western wear, and Indo-western designer outfits for 
+        both men and women. Whether you're in search of bridal lehengas, party wear, designer lehengas, gowns, suits, 
+        tuxedos, or blazers, our collections meet your fashion needs sustainably.
+    </p>
+    <p>
+        Experience the epitome of style and sustainability at Rent An Attire. Visit us today and make a statement at your 
+        next event, all while contributing to a greener planet.
+    </p>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 RentAnAttire. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
